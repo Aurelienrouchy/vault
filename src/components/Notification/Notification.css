@@ -1,0 +1,12 @@
+.notification {
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    height: 40px;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow-x: scroll;
+    margin-bottom: 8px;
+    padding: 0 16px;
+}

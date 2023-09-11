@@ -1,0 +1,16 @@
+.notification-center {
+    position: absolute;
+    width: 500px;
+    height: 300px;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0px 5px 14px 11px rgb(231, 231, 231)    ;
+    transform: translateX(-500px);
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+.notification-center.open {
+    transform: translateX(0);
+    opacity: 1;
+}

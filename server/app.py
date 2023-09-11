@@ -15,8 +15,12 @@ def search_handler():
     search_text = request.args.get('q')
     if not search_text:
         return jsonify(mock_data)
-    filtered = [x for x in mock_data if search_text not in x['type']]
+    filtered = [x for x in mock_data if search_text.lower() in x['type'].lower()]
     return jsonify(filtered)
 
+@app.route('/hello')
+def hello():
+    return 'Hello, World!'
+
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0')
+    app.run(debug=True, host='0.0.0.0', port=8000)
